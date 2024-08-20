@@ -24,7 +24,7 @@ Uses euclidean similarity to calculate percentage similarity
 
 ## Website
 
-You can view and test the website [here](yeettheanson.github.io/html/index.html).
+You can view and test the website [here](https://yeettheanson.github.io/html/index.html).
 
 
 ## Getting Started (To run this locally)
