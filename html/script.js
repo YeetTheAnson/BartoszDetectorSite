@@ -128,6 +128,35 @@ function compareMatrix(matrix) {
 
     console.log(`Average Color Distance: ${averageDistance.toFixed(2)}`);
     console.log(`Similarity: ${similarityPercentage.toFixed(2)}%`);
+
+    if (similarityPercentage > 85) {
+        alert(`Bartosz!!🙀\nSimilarity: ${similarityPercentage.toFixed(2)}%`);
+    } else {
+        const audio = new Audio('sus.mp3');
+        audio.play();
+        
+        audio.onended = () => {
+            const popup = document.createElement('div');
+            popup.style.position = 'fixed';
+            popup.style.top = '50%';
+            popup.style.left = '50%';
+            popup.style.transform = 'translate(-50%, -50%)';
+            popup.style.zIndex = '1000';
+            popup.style.backgroundColor = 'white';
+            popup.style.border = '2px solid black';
+            popup.style.padding = '20px';
+            popup.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.5)';
+            popup.style.textAlign = 'center';
+            const image = new Image();
+            image.src = 'impostor.png';
+            image.style.maxWidth = '100%';
+            image.style.maxHeight = '100%';
+            popup.appendChild(image);
+            document.body.appendChild(popup);
+            alert(`Not Bartosz❗\nSimilarity: ${similarityPercentage.toFixed(2)}%`);
+            document.body.removeChild(popup);
+        };
+    }
 }
 
 
